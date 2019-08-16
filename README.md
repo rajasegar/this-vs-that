@@ -10,13 +10,14 @@ Inspired by [YouMightNotNeedJQuery](http://youmightnotneedjquery.com/).
 
 ## Usage
 
-1. Clone the repo
+### 1. Clone the repo
 ```sh
 git clone git@github.com:rajasegar/this-vs-that.git
 ```
 
-2. Set the conventions in this shell script
-Feel free to modify the parameters like INPUT, OUTPUT, EXT, etc.,
+### 2. Set the conventions in this shell script.
+
+Feel free to modify the parameters like `INPUT`, `OUTPUT`, `EXT`, etc.,
 
 ```sh
 # File name convention for left column
@@ -33,7 +34,7 @@ EXT="js"
 
 ```
 
-3. Create new folders/files under code/ to compare based on the conventions set. For example
+### 3. Create new folders/files under `code/` to compare based on the conventions set. For example
 
 ```
 code
@@ -56,12 +57,14 @@ es6.js
 const calcCircleArea = (radius) => Math.PI * radius * radius;
 ```
 
-4. Finally update the index.html to reflect the changes using the shell script
+### 4. Finally update the index.html to reflect the changes using the shell script
 
 ```sh
 $ ./update-doc.sh
 ```
 
+You should get something like this:
+![es5vses6](https://github.com/rajasegar/this-vs-that/blob/master/assets/sample.png)
 ## Running locally
 
 This is a vanilla JavaScript application. You must serve the files locally in order for the JavaScript and CSS to load in the browser. For example:
