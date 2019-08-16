@@ -1,12 +1,10 @@
 # This vs That 
-A Comparison application boileplate
+A Comparison application boilerplate to compare code samples, api changes, framework 
+deprecations and many more.
+
 
 Check out [the deployed app](https://rajasegar.github.io/this-vs-that/)!
 
-
-This uses [Prism](https://prismjs.com/) code hightlighting with the [file highlight](https://prismjs.com/plugins/file-highlight/) plugin.
-
-Inspired by [YouMightNotNeedJQuery](http://youmightnotneedjquery.com/).
 
 ## Usage
 
@@ -65,6 +63,7 @@ $ ./update-doc.sh
 
 You should get something like this:
 ![es5vses6](https://github.com/rajasegar/this-vs-that/blob/master/assets/sample.png)
+
 ## Running locally
 
 This is a vanilla JavaScript application. You must serve the files locally in order for the JavaScript and CSS to load in the browser. For example:
@@ -96,6 +95,16 @@ Try to follow the same file naming scheme as is used elsewhere, and make sure to
 ## Deploying
 
 This site is deployed to [GitHub Pages](https://pages.github.com/) automatically from the `master` branch.
+
+## Miscellaneous Info
+This uses [Prism](https://prismjs.com/) code hightlighting with the [file highlight](https://prismjs.com/plugins/file-highlight/) plugin.
+
+Inspired by [YouMightNotNeedJQuery](http://youmightnotneedjquery.com/).
+
+## Example comparison websites
+* [YouMightNotNeedJQuery](http://youmightnotneedjquery.com/)
+* [Svelte 2 vs 3](https://rajasegar.github.io/svelte2vs3/)
+* [Ember Octane vs Classic Cheat Sheet](https://jenweber.github.io/ember-octane-vs-classic-cheat-sheet/)
 
 
 
