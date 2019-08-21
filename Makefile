@@ -14,29 +14,14 @@ objects := code/*
 
 .PHONY: clean, new
 
-define code = 
-"<section aria-labelledby=\"section-$(1)\">\n" \
-"<h3 id=\"section-$(1)\">$(section)</h3>\n" \
-"  <div class=\"grid\">\n" \
-      "<div>\n" \
-        "<h4>$(INPUT)</h4>\n" \
-        "<pre data-src=\"code/$(1)/$(INPUT).$(EXT)\"></pre>\n" \
-      "</div>\n" \
-      "<div>\n" \
-        "<h4>$(OUTPUT)</h4>\n" \
-        "<pre data-src=\"code/$(1)/$(OUTPUT).$(EXT)\"></pre>\n" \
-    "  </div>\n" \
-    "</div>\n" \
-"</section>"
-endef
-
-doc = 
-
 index.html: $(objects) 
-	for comp in $(objects); do  \
-	  echo $$comp; \
-	  doc := $(doc) $(call code,$comp); \
+	cat head.html > index.html
+	for comp in $(objects); do \
+	  SECTION=`echo $$comp | sed 's/code\///'`; \
+	  sed "s|{{EXT}}|$(EXT)|g;s|{{INPUT}}|$(INPUT)|g;s|{{OUTPUT}}|$(OUTPUT)|g;s|{{SECTION}}|$$SECTION|g" template.html >> index.html; \
 	done
+	cat tail.html >> index.html
+
 clean:  
 	rm -Rf code/*
 
